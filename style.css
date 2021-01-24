@@ -1,9 +1,21 @@
 h1{
     color: orange;
     text-align: center;
+    font-family: 'Yusei Magic', sans-serif;
 }
 
-p{
-    color:blue;
+h2{
+    color:rgb(219, 96, 8);
     text-align: center;
+    font-family: 'Yusei Magic', sans-serif;
+}
+
+body{
+    background-color: hsl(195, 34%, 80%);
+    text-align: center;
+}
+p{
+    color:chocolate;
+    text-align: center;
+    font-family: 'Potta One', cursive;
 }
