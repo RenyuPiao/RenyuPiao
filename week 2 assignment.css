@@ -1,23 +1,28 @@
 body, html {
     margin:0;
     padding:0;
-    color:#000;
-    background:#cc9;
+    color:#635B20;
+    background-image:url("week\ 2\ backgroud.jpg");
 }
 
 #wrap {
     width:100%;
     margin:0 auto;
-    background:#99c;
+    background-image: url("wrap\ .jpg");
 }
 
 #header {
     padding:5px 10px;
-    background:#ddd;
+    background-image:url("week\ 2\ backgroud.jpg");
+    font-family: 'Yusei Magic', sans-serif;
+    text-align: center;
 }
 #nav {
     padding:5px 10px;
-    background:#c99;
+    background:#cc9;
+    font-family: 'Carter One',sans-serif;
+    text-align: center;
+    font-size: 26px;
 }
 #nav ul {
     margin:0;
@@ -33,33 +38,38 @@ body, html {
     float:left;
     width:62.66%;
     padding:2%;
-    background:#9c9;
 }
 #main-1 {
     float:left;
-    width:48%;
+    width:60%;
     padding:1%;
-    background:#358982;
+    font-family:'Potta One', cursive;
+    text-align: center;
 }
 
 #main-2 {
     float:right;
-    width:48%;
+    width:36%;
     padding:1%;
-    background:#50869e;
+    font-family:'Potta One', cursive;
+    text-align: center;
+
 }
 
 #sidebar {
     float:right;
     width:29.33%;
     padding:2%;
-    background:#99c;
+    font-family:'Potta One', cursive;
+    text-align: center;
+    
 
 }
 #footer {
     clear:both;
     padding:5px 10px;
     background:#cc9;
+    text-align: center;
 }
 #footer p {
     margin:0;
