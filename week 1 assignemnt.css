@@ -9,7 +9,20 @@ h2{
     text-align: center;
     font-family: 'Yusei Magic', sans-serif;
 }
-
+#nav {
+    padding:5px 10px;
+    background:#c99;
+}
+#nav ul {
+    margin:0;
+    padding:0;
+    list-style:none;
+}
+#nav li {
+    display:inline;
+    margin:0;
+    padding:0;
+}
 body{
     text-align: center;
     background-image: url("background.jpg");
