@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body {
+  background-image: url("W3 backgroud.jpg") ;
+  width:100%;
+}
+#nav {
+    padding:5px 10px;
+    background:#cc9;
+    font-family: 'Carter One',sans-serif;
+    text-align: center;
+    font-size: 20px;
+}
+#nav ul {
+    margin:0;
+    padding:0;
+    list-style-type: none;
+    overflow: hidden;
+}
+#nav li {
+    display:inline;
+    margin:0;
+    padding:0;
+}
+li {
+    float: left;
+   }
+  
+  li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  li a:hover:not(.active) {
+    background-color: #111;
+  }
+  
+  .active {
+    background-color: #4CAF50;
+  }
+* {
+  box-sizing: border-box;
+}
+.menu {
+  float: left;
+  width: 20%;
+}
+.menuitem {
+  padding: 8px;
+  margin-top: 7px;
+  border-bottom: 1px solid #FFC200;
+}
+.main {
+  float: left;
+  width: 60%;
+  padding: 0 20px;
+  overflow: hidden;
+}
+.right {
+  background-color: lightgray;
+  float: left;
+  width: 20%;
+  padding: 10px 15px;
+  margin-top: 7px;
+}
+
+@media only screen and (max-width:768px) {
+  /* For tablets: */
+  .main {
+    width: 80%;
+    padding: 0;
+  }
+  .right {
+    width: 100%;
+  }
+  #Korean {
+    display:none;
+  }
+  #Spanish {
+    display:block;
+  }
+  #Chinese{
+    display:block;
+  }
+}
+@media only screen and (max-width:425px) {
+  /* For mobile phones: */
+  .menu, .main, .right {
+    width: 100%;
+  }
+  #Korean {
+    display:none;
+  }
+  #Spanish {
+    display:none;
+  }
+  #Chinese{
+    display:block;
+  }
+}
+</style>
+</head>
+<body style="font-family:Verdana;">
+    <div id="nav">
+        <ul>
+            <li><a href="week 0 assignment.html">Week 0</a></li>
+            <li><a href="week 1 assignment.html">Week 1 </a></li>
+            <li><a href="week 2 assignment.html">Week 2</a></li>
+            <li><a href="week 3 assignment.html">Week 3</a></li>
+        </ul>
+    </div>
+<div style="background-color:#FFC200;padding:15px;">
+  <h1><em>MEMRISE</em></h1>
+  <h3>Your Personal Language Tutor</h3>
+</div>
+
+<div style="overflow:auto">
+  <div class="menu">
+    <div class="menuitem">About MEMRISE</div>
+    <div class="menuitem">MEMRISE's Language</div>
+    <div class="menuitem">MEMRISE’s Features</div>
+    <div class="menuitem">MEMRISE’s URL</div>
+    <img src="W3 logo Memrise.png" style="width:100%">
+
+
+  </div>
+
+  <div class="main">
+    <h2>About MEMRISE</h2>
+    <p>Preparing for a trip, moving to a new country or looking to advance your career? Whatever your next adventure is, one of our courses will teach you all the real-life language you need to get out there and meet the world.</p>
+    <h2>MEMRISE's Features</h2>
+    <img id="Korean" src="W3 Korean Features MEMRISE.jpg" style="width:100%">
+    <img id="Spanish" src="W3 Spanish Features MEMRISE.png" style="width:100%">
+    <img id="Chinese" src="W3 Chinese Features MEMRISE.png"style="width:100%">
+    
+  </div>
+
+  <div class="right">
+    <h2>MEMRISE’s  Language</h2>
+    <p>There are 22 languages you can choose to strat your online language class!</p>
+    <p>Spanish</p>
+    <p>German</p>
+    <p>English</p>
+    <p>French</p>
+    <p>Chinese</p>
+    <p>japanese</p>
+    <p>Italian</p>
+    <p>Korean</p>
+    <p>......</p>
+  </div>
+</div>
+
+
+<div style="background-color:#FFC200;text-align:center;padding:10px;margin-top:7px;font-size:12px;"> learn more at https://www.memrise.com/languages-online </div>
+</body>
+</html>
