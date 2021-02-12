@@ -62,6 +62,8 @@ li {
     width:62.66%;
     padding:2%;
 }
+
+  /* Style the main-1*/
 #main-1 {
     float:left;
     width:60%;
@@ -69,7 +71,7 @@ li {
     font-family:'Potta One', cursive;
     text-align: center;
 }
-
+/* Style the main-2*/
 #main-2 {
     float:right;
     width:36%;
@@ -78,16 +80,15 @@ li {
     text-align: center;
 
 }
-
+/* Style the sidebar*/
 #sidebar {
     float:right;
     width:29.33%;
     padding:2%;
     font-family:'Potta One', cursive;
     text-align: center;
-    
-
 }
+/* Style the footer*/
 #footer {
     clear:both;
     padding:5px 10px;
