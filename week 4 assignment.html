@@ -1,0 +1,109 @@
+<html>
+<head>
+<title> Week 4 Assignment</title>
+<script type="text/javascript">
+
+/*  declaration of variables and some variable assignment and writing to the web page*/
+var variable_1, variable_2, variable_3;
+
+/*  Prompt for change of color */
+variable_1 = Number(prompt("please input a number!"));
+variable_2 = -5;
+document.write ("<h1>Week 4 Assignment</h1>");
+document.write ("<br><h1> What you have input is variable 1 = " + variable_1 + "</h1>");
+document.write ("<br><h1> variable 2 = " + variable_2 + "</h1>");
+document.write ("<br><h1> variable 3 = variable 1 + variable 2" + "</h1>");
+
+variable_3 = variable_1 + variable_2 ;
+
+/*  Determine whether variable 3 is positive or negative or zero */
+
+/*  variable 3 is positive or zero */
+if (variable_3 >= 0)
+	{ 
+     
+     document.write("<br><h1> variable 3 = " + variable_3 + "</h1>");
+     document.write("<h2>It was a positive number or Zero.</h2>");
+     document.write("<body bgcolor='#EBEBEB'>");
+     document.write("<h2>The positive numbers are the numbers that are greater than zero. Zero is neither positive nor negative.</h2>");
+  }
+  /*  variable 3 is negative */
+    else 
+            { 
+              document.write("<br><h1> variable 3 = " + variable_3 + "</h1>");
+              document.write("<h2>It was a negative number.</h2>");
+              document.write("<body bgcolor='#FFCC99'>");
+              document.write("<h2>The negative numbers are the numbers that are less than zero.</h2>");
+	}
+	
+</script>
+</head>
+
+<style>
+    /* Style the navigation bar */
+    #nav {
+        padding:5px 10px;
+        background:#cc9;
+        font-family: 'Carter One',sans-serif;
+        text-align: center;
+        font-size: 20px;
+    }
+    /* Style the nav links */
+    #nav ul {
+        margin:0;
+        padding:0;
+        list-style-type: none;
+        overflow: hidden;
+    }
+    #nav li {
+        display:inline;
+        margin:0;
+        padding:0;
+    }
+    li {
+        float: left;
+       }
+      
+      li a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+      }
+       /* Change the link color on hover */
+      li a:hover:not(.active) {
+        background-color: #111;
+      }
+      
+      .active {
+        background-color: #4CAF50;
+      }
+    * {
+      box-sizing: border-box;
+    }
+    /* Style the menu */
+    .menu {
+      float: left;
+      width: 20%;
+    }
+    .menuitem {
+      padding: 8px;
+      margin-top: 7px;
+      border-bottom: 1px solid #FFC200;
+    }
+</style>
+
+<body>
+    <div id="nav">
+        <ul>
+            <li><a href="week 0 assignment.html">Week 0</a></li>
+            <li><a href="week 1 assignment.html">Week 1 </a></li>
+            <li><a href="week 2 assignment.html">Week 2</a></li>
+            <li><a href="week 3 assignment.html">Week 3</a></li>
+            <li><a href="week 4 assignment.html">Week 4</a></li>
+        </ul>
+    </div>
+
+</body>
+</html>
