@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="week 5 assignment.css" media="screen"> 
+<script>
+function myFunction1() {
+  document.getElementById("demo1").innerHTML = "This school is rated below average in school quality compared to other schools in New York. Students here are making below average year-over-year academic improvement, and students perform below average on state tests.";
+}
+function myFunction2() {
+      document.getElementById("demo2").innerHTML = "This school is rated above average in school quality compared to other schools in Florida. Students here are making above average year-over-year academic improvement, this school has above average results in how well it’s serving disadvantaged students, and students perform above average on state tests.";
+    }
+
+function myFunction3() {
+      document.getElementById("demo3").innerHTML = "This school is rated above average in school quality compared to other schools in Florida. Students here are making above average year-over-year academic improvement, this school has above average results in how well it’s serving disadvantaged students, and students perform above average on state tests.";
+    }
+</script>
+
+<script type="text/javascript">
+
+    function myClick() {
+        var name;
+        name = prompt("Enter the student's name")
+        document.Survey.name.value = name;
+
+        var age;
+        age = prompt("Enter the student's age")
+        document.Survey.age.value = age;
+        
+     }
+    </script>
+
+</head>
+<body>
+
+<h2>Choose your favorite School</h2>
+
+<p id="demo1"></p>
+<button type="button" onclick="myFunction1()">Liberty Middle School</button>
+
+<p id="demo2"></p> 
+<button type="button" onclick="myFunction2()">Terrace Community Middle School</button>
+
+<p id="demo3"></p> 
+<button type="button" onclick="myFunction3()">Coleman Middle School</button>
+
+<form NAME="Survey" METHOD="post" ACTION="http://www.tipjar.com/bin/generic?Subject=TJGFH+TEST&mailto=ERW">
+    
+    <div class="form-group">
+    Please enter your name: <input TYPE=text NAME="Name" VALUE="" SIZE=30 MAXLENGTH=30>
+    <br/>
+
+    <div class="form-group">
+    Please enter your age: <input TYPE=text NAME="Age" VALUE="" SIZE=30 MAXLENGTH=30>
+    <br/>
+    Please select student's gender <select NAME="Gender">
+        <option VALUE="Boy"> Boy
+        <option VALUE="Girl">Girl
+ </select>
+    <br/>
+
+    <div class="form-group">
+    Please select Please select student's upcoming grade <select NAME="Upcominggrade">
+        <option VALUE="6"> 6
+        <option VALUE="7">7
+        <option VALUE="8">8
+ </select> 
+    <br/>
+
+    <div class="form-group">
+    Please select Please select a preference school <select NAME="School">
+        <option VALUE="Liberty Middle School,"> Liberty Middle School
+        <option VALUE="Terrace Community Middle School">Terrace Community Middle School
+        <option VALUE="Coleman Middle School">Coleman Middle School
+ </select> 
+    <br/>
+    <input type="submit" value="Click Me to Submit">
+
+</body>
+
+</html> 
