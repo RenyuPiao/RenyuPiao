@@ -1,0 +1,24 @@
+/* this is the only custom CSS needed. everything else is "styled" by Boostrap */
+body, html {
+    margin:0;
+    padding:0;
+    color:#635B20;
+    background-image:url("week\ 2\ backgroud.jpg");
+    text-align: center;
+}       
+
+h2 {
+    margin:0;
+    font-family: 'Akaya Telivigala', cursive;
+}
+
+#my_form {
+    margin-top: 10%;
+    margin-left: 10%;
+    margin-right: 10%;
+        }
+
+#form-group {
+    font-family: 'Yusei Magic', sans-serif;
+    text-align: center;
+        }
