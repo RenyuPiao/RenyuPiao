@@ -1,109 +1,102 @@
+<!DOCTYPE html>
 <html>
 <head>
-<title> Week 4 Assignment</title>
-<script type="text/javascript">
+    <link rel="stylesheet" type="text/css" href="week 5 assignment.css" media="screen"> 
 
-/*  declaration of variables and some variable assignment and writing to the web page*/
-var variable_1, variable_2, variable_3;
+<script>
+    /** add Three buttons, click to show the school information.*/
+function myFunction1() {
+  document.getElementById("demo1").innerHTML = "This school is rated below average in school quality compared to other schools in New York. Students here are making below average year-over-year academic improvement, and students perform below average on state tests.";
+}
+function myFunction2() {
+      document.getElementById("demo2").innerHTML = "This school is rated above average in school quality compared to other schools in Florida. Students here are making above average year-over-year academic improvement, this school has above average results in how well it’s serving disadvantaged students, and students perform above average on state tests.";
+    }
 
-/*  Prompt for change of color */
-variable_1 = Number(prompt("please input a number!"));
-variable_2 = -5;
-document.write ("<h1>Week 4 Assignment</h1>");
-document.write ("<br><h1> What you have input is variable 1 = " + variable_1 + "</h1>");
-document.write ("<br><h1> variable 2 = " + variable_2 + "</h1>");
-document.write ("<br><h1> variable 3 = variable 1 + variable 2" + "</h1>");
-
-variable_3 = variable_1 + variable_2 ;
-
-/*  Determine whether variable 3 is positive or negative or zero */
-
-/*  variable 3 is positive or zero */
-if (variable_3 >= 0)
-	{ 
-     
-     document.write("<br><h1> variable 3 = " + variable_3 + "</h1>");
-     document.write("<h2>It was a positive number or Zero.</h2>");
-     document.write("<body bgcolor='#EBEBEB'>");
-     document.write("<h2>The positive numbers are the numbers that are greater than zero. Zero is neither positive nor negative.</h2>");
-  }
-  /*  variable 3 is negative */
-    else 
-            { 
-              document.write("<br><h1> variable 3 = " + variable_3 + "</h1>");
-              document.write("<h2>It was a negative number.</h2>");
-              document.write("<body bgcolor='#FFCC99'>");
-              document.write("<h2>The negative numbers are the numbers that are less than zero.</h2>");
-	}
-	
+function myFunction3() {
+      document.getElementById("demo3").innerHTML = "This school is rated above average in school quality compared to other schools in Florida. Students here are making above average year-over-year academic improvement, this school has above average results in how well it’s serving disadvantaged students, and students perform above average on state tests.";
+    }
 </script>
+
+<script type="text/javascript">
+   /** Function to add name and age,generating survey results */
+
+    function myClick() {
+        var name;
+        name = prompt("Enter the student's name")
+        document.Survey.name.value = name;
+
+        var age;
+        age = prompt("Enter the student's age")
+        document.Survey.age.value = age;
+        
+     }
+    </script>
+
 </head>
-
-<style>
-    /* Style the navigation bar */
-    #nav {
-        padding:5px 10px;
-        background:#cc9;
-        font-family: 'Carter One',sans-serif;
-        text-align: center;
-        font-size: 20px;
-    }
-    /* Style the nav links */
-    #nav ul {
-        margin:0;
-        padding:0;
-        list-style-type: none;
-        overflow: hidden;
-    }
-    #nav li {
-        display:inline;
-        margin:0;
-        padding:0;
-    }
-    li {
-        float: left;
-       }
-      
-      li a {
-        display: block;
-        color: white;
-        text-align: center;
-        padding: 14px 16px;
-        text-decoration: none;
-      }
-       /* Change the link color on hover */
-      li a:hover:not(.active) {
-        background-color: #111;
-      }
-      
-      .active {
-        background-color: #4CAF50;
-      }
-    * {
-      box-sizing: border-box;
-    }
-    /* Style the menu */
-    .menu {
-      float: left;
-      width: 20%;
-    }
-    .menuitem {
-      padding: 8px;
-      margin-top: 7px;
-      border-bottom: 1px solid #FFC200;
-    }
-</style>
-
 <body>
-    <div id="nav">
-        <ul>
-            <li><a href="week 0 assignment.html">Week 0</a></li>
-            <li><a href="week 1 assignment.html">Week 1 </a></li>
-            <li><a href="week 2 assignment.html">Week 2</a></li>
-            <li><a href="week 3 assignment.html">Week 3</a></li>
-            <li><a href="week 4 assignment.html">Week 4</a></li>
-        </ul>
-    </div>
+        <div id="nav">
+            <ul>
+                <li><a href="week 0 assignment.html">Week 0</a></li>
+                <li><a href="week 1 assignment.html">Week 1 </a></li>
+                <li><a href="week 2 assignment.html">Week 2</a></li>
+                <li><a href="week 3 assignment.html">Week 3</a></li>
+                <li><a href="week 4 assignment.html">Week 4</a></li>
+                <li><a href="week 5 assignment.html">Week 5</a></li>
+            </ul>
+        </div>
+    
 
+<h2>Choose your favorite School</h2>
+
+<img src="Liberty Middle School.png" alt="a logo of Liberty Middle School" width="280"height="200">
+<p id="demo1"></p>
+<button type="button" onclick="myFunction1()">Liberty Middle School</button>
+<br/>
+<br/>
+<img src="Terrace Community Middle School.png" alt="a logo of Terrace Community Middle School" width="280"height="200">
+<p id="demo2"></p> 
+<button type="button" onclick="myFunction2()">Terrace Community Middle School</button>
+<br/>
+<br/>
+<img src="Coleman Middle School.jpg" alt="a logo of Coleman Middle School" width="280"height="200">
+<p id="demo3"></p> 
+<button type="button" onclick="myFunction3()">Coleman Middle School</button>
+<br/>
+<br/>
+<h2>Let's do some survey!</h2>
+<form NAME="Survey" METHOD="post" ACTION="http://www.tipjar.com/bin/generic?Subject=TJGFH+TEST&mailto=ERW">
+    
+    <div class="form-group">
+    Please enter your name: <input TYPE=text NAME="Name" VALUE="" SIZE=30 MAXLENGTH=30>
+    <br/>
+
+    <div class="form-group">
+    Please enter your age: <input TYPE=text NAME="Age" VALUE="" SIZE=30 MAXLENGTH=30>
+    <br/>
+    Please select student's gender <select NAME="Gender">
+        <option VALUE="Boy"> Boy
+        <option VALUE="Girl">Girl
+ </select>
+    <br/>
+
+    <div class="form-group">
+    Please select Please select student's upcoming grade <select NAME="Upcominggrade">
+        <option VALUE="6"> 6
+        <option VALUE="7">7
+        <option VALUE="8">8
+ </select> 
+    <br/>
+
+    <div class="form-group">
+    Please select Please select a preference school <select NAME="School">
+        <option VALUE="Liberty Middle School,"> Liberty Middle School
+        <option VALUE="Terrace Community Middle School">Terrace Community Middle School
+        <option VALUE="Coleman Middle School">Coleman Middle School
+ </select> 
+    <br/>
+    
+    <input type="submit" value="Click Me to Submit">
+      
 </body>
-</html>
+
+</html> 
