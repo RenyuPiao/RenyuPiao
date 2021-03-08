@@ -1,102 +1,65 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <link rel="stylesheet" type="text/css" href="week 5 assignment.css" media="screen"> 
+    <link rel="stylesheet" type="text/css" href="week 7 assignment.css" media="screen"> 
+<script type="text/javascript">
+   /* Constructor and prototype for a choice */
+    function choice(picture,course){
+        this.picture= picture;
+        this.course=course;
 
-<script>
-    /** add Three buttons, click to show the school information.*/
-function myFunction1() {
-  document.getElementById("demo1").innerHTML = "This school is rated below average in school quality compared to other schools in New York. Students here are making below average year-over-year academic improvement, and students perform below average on state tests.";
-}
-function myFunction2() {
-      document.getElementById("demo2").innerHTML = "This school is rated above average in school quality compared to other schools in Florida. Students here are making above average year-over-year academic improvement, this school has above average results in how well it’s serving disadvantaged students, and students perform above average on state tests.";
+   // Show the choice
+    this.writeChoice = function (){
+                	var str = "If your child likes "+ this.picture+", "+ "that means his/her favorite course might be "+ this.course+" .";
+                    writeText(str, "textArea");                                             	 
     }
+   };
+   /* Write some text out to an html element. The text to write and the id of the html
+element to write to are parameters.*/
+   function writeText(txt, destination){
+   document.getElementById(destination).innerHTML=txt;
+   }
+   /* declare the choice value*/
+    var choice1 = new choice("picture 1", "Math course",); 
+    var choice2 = new choice("picture 2", "Music course",); 
+    var choice3 = new choice("picture 3", "Painting course",); 
 
-function myFunction3() {
-      document.getElementById("demo3").innerHTML = "This school is rated above average in school quality compared to other schools in Florida. Students here are making above average year-over-year academic improvement, this school has above average results in how well it’s serving disadvantaged students, and students perform above average on state tests.";
-    }
 </script>
 
-<script type="text/javascript">
-   /** Function to add name and age,generating survey results */
-
-    function myClick() {
-        var name;
-        name = prompt("Enter the student's name")
-        document.Survey.name.value = name;
-
-        var age;
-        age = prompt("Enter the student's age")
-        document.Survey.age.value = age;
-        
-     }
-    </script>
-
-</head>
 <body>
-        <div id="nav">
-            <ul>
-                <li><a href="week 0 assignment.html">Week 0</a></li>
-                <li><a href="week 1 assignment.html">Week 1 </a></li>
-                <li><a href="week 2 assignment.html">Week 2</a></li>
-                <li><a href="week 3 assignment.html">Week 3</a></li>
-                <li><a href="week 4 assignment.html">Week 4</a></li>
-                <li><a href="week 5 assignment.html">Week 5</a></li>
-            </ul>
-        </div>
-    
+<div class="header">
+    <h1>Week 7 assignment</h1>
+    <h1>Find your children's favorite Course</h1>
+</div>
+<div id="nav">
+    <ul>
+        <li><a href="week 0 assignment.html">Week 0</a></li>
+        <li><a href="week 1 assignment.html">Week 1 </a></li>
+        <li><a href="week 2 assignment.html">Week 2</a></li>
+        <li><a href="week 3 assignment.html">Week 3</a></li>
+        <li><a href="week 4 assignment.html">Week 4</a></li>
+        <li><a href="week 5 assignment.html">Week 5</a></li>
+        <li><a href="week 7 assignment.html">Week 7</a></li>
+    </ul>
+</div>
+<div class="row">
+    <div class="column">
+        <h2>Picture 1</h2>
+        <img src="W7 math.jpg" alt="a picture of math" width="400"height="300">
+    </div>
+    <div class="column">
+        <h2>Picture 2</h2>
+        <img src="W7 music.jpg" alt="a picture of music" width="400"height="300">
+    </div>
+    <div class="column">
+        <h2>Picture 3</h2>
+        <img src="W7 paint.jpg" alt="a picture of paint" width="400"height="300">
+    </div>
+</div>
 
-<h2>Choose your favorite School</h2>
-
-<img src="Liberty Middle School.png" alt="a logo of Liberty Middle School" width="280"height="200">
-<p id="demo1"></p>
-<button type="button" onclick="myFunction1()">Liberty Middle School</button>
-<br/>
-<br/>
-<img src="Terrace Community Middle School.png" alt="a logo of Terrace Community Middle School" width="280"height="200">
-<p id="demo2"></p> 
-<button type="button" onclick="myFunction2()">Terrace Community Middle School</button>
-<br/>
-<br/>
-<img src="Coleman Middle School.jpg" alt="a logo of Coleman Middle School" width="280"height="200">
-<p id="demo3"></p> 
-<button type="button" onclick="myFunction3()">Coleman Middle School</button>
-<br/>
-<br/>
-<h2>Let's do some survey!</h2>
-<form NAME="Survey" METHOD="post" ACTION="http://www.tipjar.com/bin/generic?Subject=TJGFH+TEST&mailto=ERW">
-    
-    <div class="form-group">
-    Please enter your name: <input TYPE=text NAME="Name" VALUE="" SIZE=30 MAXLENGTH=30>
-    <br/>
-
-    <div class="form-group">
-    Please enter your age: <input TYPE=text NAME="Age" VALUE="" SIZE=30 MAXLENGTH=30>
-    <br/>
-    Please select student's gender <select NAME="Gender">
-        <option VALUE="Boy"> Boy
-        <option VALUE="Girl">Girl
- </select>
-    <br/>
-
-    <div class="form-group">
-    Please select Please select student's upcoming grade <select NAME="Upcominggrade">
-        <option VALUE="6"> 6
-        <option VALUE="7">7
-        <option VALUE="8">8
- </select> 
-    <br/>
-
-    <div class="form-group">
-    Please select Please select a preference school <select NAME="School">
-        <option VALUE="Liberty Middle School,"> Liberty Middle School
-        <option VALUE="Terrace Community Middle School">Terrace Community Middle School
-        <option VALUE="Coleman Middle School">Coleman Middle School
- </select> 
-    <br/>
-    
-    <input type="submit" value="Click Me to Submit">
-      
+<input type="button" value = "Choice 1" onclick= "choice1.writeChoice();" name="Choice 1"/>
+<input type="button" value = "Choice 2" onclick= "choice2.writeChoice();" name="Choice 2"/>
+<input type="button" value = "Choice 3" onclick= "choice3.writeChoice();" name="Choice 3"/>
+<p id="textArea"> </p>
 </body>
-
 </html> 
