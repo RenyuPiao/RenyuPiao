@@ -65,6 +65,7 @@ h2 {
     clear: both;
   }
 
+  /* style the textarea */
  #textArea{
     text-align: center;
     font-family:'Potta One', cursive;
