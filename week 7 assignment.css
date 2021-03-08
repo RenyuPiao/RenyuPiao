@@ -6,6 +6,7 @@
   body {
     background-image: url("W5 bg.jpg") ;
     font-family: 'Carter One',sans-serif;
+    text-align: center;
   }
 /* Style the navigation bar */
 #nav {
@@ -65,8 +66,14 @@ h2 {
     clear: both;
   }
 
-  /* style the textarea */
- #textArea{
+  /* style the "illustration" */
+ #demo{
     text-align: center;
     font-family:'Potta One', cursive;
  }
+
+/* style the "my choice" */
+#demo1 {
+  text-align: center;
+  font-family:'Potta One', cursive;
+}
