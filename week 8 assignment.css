@@ -1,0 +1,128 @@
+/* this is the only custom CSS needed. everything else is "styled" by Boostrap */
+body, html {
+    margin:0;
+    padding:0;
+    color:#050502;
+    background-image:url("W8\ bg.jpg");
+    text-align: left;
+    font-family: 'Monaco',Monospace;
+    font-size: 20px;
+}       
+
+/* Style the navigation bar */
+#nav {
+    padding:5px 10px;
+    background:#cc9;
+    font-family: 'Carter One',sans-serif;
+    text-align: center;
+    font-size: 20px;
+}
+/* Style the nav links */
+#nav ul {
+    margin:0;
+    padding:0;
+    list-style-type: none;
+    overflow: hidden;
+}
+#nav li {
+    display:inline;
+    margin:0;
+    padding:0;
+}
+li {
+    float: left;
+   }
+  
+  li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  /* Change the link color on hover */
+  li a:hover:not(.active) {
+    background-color: #111;
+  }
+  
+  .active {
+    background-color: #4CAF50;
+  }
+  /* style the head "choose yuur favorite school" and "let's do some survey!"*/
+h2 {
+    margin:0;
+    font-family: 'Ranchers', cursive;
+    font-weight: bold;
+    color:#F97354
+}
+
+/*style the school introduction with picture into three part*/
+.column {
+    float: left;
+    width: 30%;
+    padding: 15px;
+  }
+  
+/* Style the "let's do survey" part and creade a box model*/
+  .column1 {
+    float: left;
+    background-color:#FFFFF0;
+    width: 30%;
+    border: 15px solid #cc9;
+    padding: 50px;
+    margin: 20px;
+  }
+
+  /* Style the "add student's name" pary and creade a box model*/
+  .column2 {
+    float: left;
+    background-color: #FFFFF0;
+    width: 40%;
+    border: 15px solid #cc9;
+    padding: 50px;
+    margin: 20px;
+  }
+  
+  /* style the "submit" button in Survey part */
+  
+  input[type=submit]{
+    background:#cc9;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 4px 2px;
+    cursor: pointer;
+    font-size: 13px;
+  }
+ 
+/* style the "school introduction" button under the phcture */
+  .button1 {
+    background:#cc9;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 4px 2px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+/* style the "add student name" button */
+  .button2 {
+    background:#cc9;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 4px 2px;
+    cursor: pointer;
+    font-size: 10px;
+  }
+
+  
