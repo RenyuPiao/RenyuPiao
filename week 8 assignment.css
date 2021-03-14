@@ -3,9 +3,9 @@ body, html {
     margin:0;
     padding:0;
     color:#050502;
-    background-image:url("W8\ bg.jpg");
+    background-image:url("week\ 2\ backgroud.jpg");
     text-align: left;
-    font-family: 'Monaco',Monospace;
+    font-family: 'Recursive', sans-serif;
     font-size: 20px;
 }       
 
@@ -122,7 +122,7 @@ h2 {
     display: inline-block;
     margin: 4px 2px;
     cursor: pointer;
-    font-size: 10px;
+    font-size: 16px;
   }
 
   
