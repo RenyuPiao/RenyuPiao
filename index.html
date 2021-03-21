@@ -1,70 +1,47 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <link rel="stylesheet" type="text/css" href="week 8 assignment.css" media="screen"> 
+    <link rel="stylesheet" type="text/css" href="week 9 assignment.css" media="screen"> 
 
-<script>
-    /** add Three buttons, click to show the school information.*/
-function myFunction1() {
-  document.getElementById("demo1").innerHTML = "This school is rated below average in school quality compared to other schools in New York. Students here are making below average year-over-year academic improvement, and students perform below average on state tests.";
-}
-function myFunction2() {
-      document.getElementById("demo2").innerHTML = "This school is rated above average in school quality compared to other schools in Florida. Students here are making above average year-over-year academic improvement, this school has above average results in how well it’s serving disadvantaged students, and students perform above average on state tests.";
+<script type = "text/javascript">
+
+     //  declare two varibles.
+    var course =["language","Art","Math","Science","Sport"];
+    var evaluate= new Array();
+
+    //  make a loop for prompting for the survey score for each course.
+    for (i= 0; i< course.length; i++){
+        evaluate[i]=parseInt(prompt("Enter the evaluated grade (0-10) for Your"+ " "+ course[i]+" Course. (PS: The higher your score, the more satisfied you are.)"));
     }
 
-function myFunction3() {
-      document.getElementById("demo3").innerHTML = "This school is rated above average in school quality compared to other schools in Florida. Students here are making above average year-over-year academic improvement, this school has above average results in how well it’s serving disadvantaged students, and students perform above average on state tests.";
-    }
-//create three arrays to add and show students names om the website//
-var studentnames1 = ["john Adams", "julie S", "Edward Tuffty"];
-var studentnames2 = ["Maria Garcia", "Maria Rodriguez", "Maria Hernandez"];
-var studentnames3 = ["James Johnson", "Mary Smith", "Olivia Taylor"];
-
-function showschool1(){
-    document.getElementById("demo4").innerHTML = "Students' list in the Liberty Middle School: " + studentnames1; 
-}
-function addStudent1()
-    {
-        studentnames1.push(prompt("If you choose Liberty Middle School, Please enter your name here:"));
-        showschool1();        
-    }
-
-function showschool2(){
-    document.getElementById("demo5").innerHTML = "Students' list in the Terrace Community Middle School:  " + studentnames2; 
-}
-function addStudent2()
-    {
-        studentnames2.push(prompt("If you choose Terrace Community Middle School, Please enter your name here:"));
-        showschool2();        
-    }
-
-function showschool3(){
-    document.getElementById("demo6").innerHTML = "Students' list in the Coleman Middle School:  " + studentnames3; 
-}
-function addStudent3()
-    {
-        studentnames3.push(prompt("If you choose Coleman Middle School, Please enter your name here:"));
-        showschool3();        
-    }
+    //  calulate the average survey score.
+    function doCalcAvg ()
+			{
+			var i = 0;
+			var total = 0;
+        	 do {
+  					total = total + evaluate[i];
+  					i++;
+				}
+			 while (i < evaluate.length); 
+            
+            return (total / evaluate.length);
+        }
+     //  Write the funstion
+    function writeText (txt, id)
+	    {
+	    document.getElementById(id).innerHTML = txt;
+	    }
+         
 </script>
-
-<script type="text/javascript">
-   /** Function to add name and age,generating survey results */
-
-    function myClick() {
-        var name;
-        name = prompt("Enter the student's name")
-        document.Survey.name.value = name;
-
-        var age;
-        age = prompt("Enter the student's age")
-        document.Survey.age.value = age;
-        
-     }
-    </script>
-
 </head>
+
 <body>
+
+        <header>
+        <h1>Week 9 assignment</h1>   
+        </header>
+
         <div id="nav">
             <ul>
                 <li><a href="week 0 assignment.html">Week 0</a></li>
@@ -75,83 +52,35 @@ function addStudent3()
                 <li><a href="week 5 assignment.html">Week 5</a></li>
                 <li><a href="week 7 assignment.html">Week 7</a></li>
                 <li><a href="week 8 assignment.html">Week 8</a></li>
+                <li><a href="week 9 assignment.html">Week 9</a></li>
             </ul>
         </div>
-    
 
-<h2>Know More about Middle School</h2>
+        <h1>Course Satisfaction Survey</h1>
+    </br>
+    </br>
+        <div class="column">
+            <p id="txthere"></p>
+            <button class="button1" onclick="writeText ('Your average survey score is  ' + doCalcAvg() , 'txthere');">Click to show your the average survey score </button>
+        </div>
+        </br>
+        </br>
+        <h1>Course Satisfaction Anysis</h1>
+        <div class="row">
+            <div class="column1">
+                <p>If your average score is between <em>0-4</em>, You might discuss with your course adviser to improve your whole course design.</p>
+                <img src="week 9 1.png" alt="a picture of math" width="180"height="180">
+            </div>
+            <div class="column1">
+                <p>If your average score is between <em>4-7</em>, You might focuse on improving specific course with lower survey score.</p>
+                <img src="week 9 2.png" alt="a picture of music" width="180"height="180">
+            </div>
+            <div class="column1">
+                <p>If your average score is between <em>7-10</em>, I'm glad you're happy with the course, keep it up!</p>
+                <img src="week 9 3.png" alt="a picture of paint" width="180"height="180">
+            </div>
+        </div>
+  </body>
+</html>
 
-<div class="row">
-    <div class="column">
-<br/>
-<img src="Liberty Middle School.png" alt="a logo of Liberty Middle School" width="280"height="200">
-<p id="demo1"></p>
-<button class="button1" type="button" onclick="myFunction1()">Liberty Middle School</button>
-<br/>
-    </div>
 
-    <div class="column">
-<br/>
-<img src="Terrace Community Middle School.png" alt="a logo of Terrace Community Middle School" width="280"height="200">
-<p id="demo2"></p> 
-<button class="button1" type="button" onclick="myFunction2()">Terrace Community Middle School</button>
-<br/>
-    </div>
-
-    <div class="column">
-<br/>
-<img src="Coleman Middle School.jpg" alt="a logo of Coleman Middle School" width="280"height="200">
-<p id="demo3"></p> 
-<button class="button1" type="button" onclick="myFunction3()">Coleman Middle School</button>
-<br/>
-<br/>
-      </div>
-</div>
-
-    <div class="column1">
-<h2>Let's do some survey!</h2>
-<form NAME="Survey" METHOD="post" ACTION="http://www.tipjar.com/bin/generic?Subject=TJGFH+TEST&mailto=ERW">
-    
-   
-    Please enter your name: <input TYPE=text NAME="Name" VALUE="" SIZE=30 MAXLENGTH=30>
-    <br/>
-    Please enter your age: <input TYPE=text NAME="Age" VALUE="" SIZE=30 MAXLENGTH=30>
-    <br/>
-    Please select student's gender <select NAME="Gender">
-        <option VALUE="Boy"> Boy
-        <option VALUE="Girl">Girl
- </select>
-    <br/>
-    Please select Please select student's upcoming grade <select NAME="Upcominggrade">
-        <option VALUE="6"> 6
-        <option VALUE="7">7
-        <option VALUE="8">8
- </select> 
-    <br/>
- 
-    Please select Please select a preference school <select NAME="School">
-        <option VALUE="Liberty Middle School,"> Liberty Middle School
-        <option VALUE="Terrace Community Middle School">Terrace Community Middle School
-        <option VALUE="Coleman Middle School">Coleman Middle School
- </select> 
-    <br/>
-    
-       <input type="submit" value="Click Me to Submit">
-    <br/>
-    </div>
-
-    <div class="column2">
-    <h2>Enter your prefer school and check others' choices here</h2>
-
-    <p id="demo4"></p>
-    <p id="demo5"></p>
-    <p id="demo6"></p>
-    <button class="button2" type="button" onclick="addStudent1()">Liberty Middle School</button>
-    <button class="button2" type="button" onclick="addStudent2()">Terrace Community Middle School</button>
-    <button class="button2" type="button" onclick="addStudent3()">Coleman Middle School</button>
-    
-    </div>
-   
-</body>
-
-</html> 
