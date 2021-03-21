@@ -2,8 +2,8 @@
 body, html {
     margin:0;
     padding:0;
-    color:#050502;
-    background-image:url("week\ 2\ backgroud.jpg");
+    color:#334C81;
+    background-image:url("W9\ bg.jpg");
     text-align: center;
     font-family: 'Recursive', sans-serif;
     font-size: 20px;
@@ -11,7 +11,7 @@ body, html {
 /* Style the navigation bar */
 #nav {
     padding:5px 10px;
-    background:#cc9;
+    background:#107FC9;
     font-family: 'Carter One',sans-serif;
     text-align: center;
     font-size: 20px;
@@ -34,14 +34,14 @@ li {
   
   li a {
     display: block;
-    color: white;
+    color:whitesmoke;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
   }
   /* Change the link color on hover */
   li a:hover:not(.active) {
-    background-color: #111;
+    background-color: #D2B48C;
   }
   
   .active {
@@ -53,39 +53,13 @@ h1 {
     margin:0;
     font-family: 'Ranchers', cursive;
     font-weight: bold;
-    color:#F97354
+    color:#000E29;
 }
-h2 {
-    margin:0;
-    font-family: 'Ranchers', cursive;
-    font-weight: bold;
-    color:#F97354
-}
-
-.column {
-    float: left;
-    width: 33.33%;
-    padding: 15px;
-  }
-
-  /* Clear floats after the columns */
-.row:after {
-    content: "";
-    display: table;
-    clear: both;
-  }
-
-  /* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
-@media screen and (max-width:600px) {
-    .column {
-      width: 100%;
-    }
-  
-
-  .button{
-    background:#cc9;
+  /* style the button */
+  .button1{
+    background:#107FC9;
     border: none;
-    color: white;
+    color: whitesmoke;
     padding: 15px 32px;
     text-align: center;
     text-decoration: none;
@@ -93,4 +67,25 @@ h2 {
     margin: 4px 2px;
     cursor: pointer;
     font-size: 16px;
+  }
+ /* style the main content */
+  .column{
+    border: 2px solid #C0C0C0;
+    outline: #107FC9 solid 10px;
+    margin: auto;  
+    padding: 20px;
+    text-align: center;
+  }
+
+  /* Create three equal columns that floats next to each other */
+.column1 {
+    float: left;
+    width: 30%;
+    padding: 15px;
+  }
+
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
   }
