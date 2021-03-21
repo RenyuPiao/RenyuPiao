@@ -4,12 +4,17 @@
     <link rel="stylesheet" type="text/css" href="week 9 assignment.css" media="screen"> 
 
 <script type = "text/javascript">
+
+     //  declare two varibles.
     var course =["language","Art","Math","Science","Sport"];
     var evaluate= new Array();
 
+    //  make a loop for prompting for the survey score for each course.
     for (i= 0; i< course.length; i++){
         evaluate[i]=parseInt(prompt("Enter the evaluated grade (0-10) for Your"+ " "+ course[i]+" Course. (PS: The higher your score, the more satisfied you are.)"));
     }
+
+    //  calulate the average survey score.
     function doCalcAvg ()
 			{
 			var i = 0;
@@ -22,7 +27,8 @@
             
             return (total / evaluate.length);
         }
-        function writeText (txt, id)
+     //  Write the funstion
+    function writeText (txt, id)
 	    {
 	    document.getElementById(id).innerHTML = txt;
 	    }
@@ -34,7 +40,6 @@
 
         <header>
         <h1>Week 9 assignment</h1>   
-        <h1>Course Satisfaction Survey</h1>
         </header>
 
         <div id="nav">
@@ -51,9 +56,30 @@
             </ul>
         </div>
 
+        <h1>Course Satisfaction Survey</h1>
+    </br>
+    </br>
+        <div class="column">
             <p id="txthere"></p>
-            <button onclick="writeText ('The average survey grade is  ' + doCalcAvg() , 'txthere');">Click to show your the average satisfactory </button>
-          
+            <button class="button1" onclick="writeText ('Your average survey score is  ' + doCalcAvg() , 'txthere');">Click to show your the average survey score </button>
+        </div>
+        </br>
+        </br>
+        <h1>Course Satisfaction Anysis</h1>
+        <div class="row">
+            <div class="column1">
+                <p>If your average score is between <em>0-4</em>, You might discuss with your course adviser to improve your whole course design.</p>
+                <img src="week 9 1.png" alt="a picture of math" width="180"height="180">
+            </div>
+            <div class="column1">
+                <p>If your average score is between <em>4-7</em>, You might focuse on improving specific course with lower survey score.</p>
+                <img src="week 9 2.png" alt="a picture of music" width="180"height="180">
+            </div>
+            <div class="column1">
+                <p>If your average score is between <em>7-10</em>, I'm glad you're happy with the course, keep it up!</p>
+                <img src="week 9 3.png" alt="a picture of paint" width="180"height="180">
+            </div>
+        </div>
   </body>
 </html>
 
