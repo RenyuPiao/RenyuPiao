@@ -1,86 +1,115 @@
 <!DOCTYPE html>
+
 <html>
 <head>
-    <link rel="stylesheet" type="text/css" href="week 9 assignment.css" media="screen"> 
+<link rel="stylesheet" type="text/css" href="week 10 assignment.css" media="screen"> 
 
-<script type = "text/javascript">
+<script type="text/javascript">
 
-     //  declare two varibles.
-    var course =["language","Art","Math","Science","Sport"];
-    var evaluate= new Array();
+/* Write a random image to a location. So need an array of image names, and then randomly pick from that.. */
+function GetRandomRange(lower, upper)
+ {
+ var length, aNumber;
 
-    //  make a loop for prompting for the survey score for each course.
-    for (i= 0; i< course.length; i++){
-        evaluate[i]=parseInt(prompt("Enter the evaluated grade (0-10) for Your"+ " "+ course[i]+" Course. (PS: The higher your score, the more satisfied you are.)"));
-    }
+ length = (upper - lower) + 1;
+ aNumber = Math.floor(Math.random() * length) + lower;
+ 
+//  alert("GetRandomRange" + lower + " " + upper + " " + aNumber);
+ 
+ return aNumber;
 
-    //  calulate the average survey score.
-    function doCalcAvg ()
-			{
-			var i = 0;
-			var total = 0;
-        	 do {
-  					total = total + evaluate[i];
-  					i++;
-				}
-			 while (i < evaluate.length); 
-            
-            return (total / evaluate.length);
-        }
-     //  Write the funstion
-    function writeText (txt, id)
-	    {
-	    document.getElementById(id).innerHTML = txt;
-	    }
-         
+ }
+ function randomStringFromArray(anArray)
+  {
+    var aString, len, high_index;
+    
+    len = anArray.length;
+    high_index = len - 1;
+    random_index =  GetRandomRange(0, high_index);
+    
+    aString = anArray[random_index];
+    /*
+    alert("the random string from an array of stings that will be returned is " + aString);
+    */
+    return aString;
+  }
+
+ /* Write a random image to a location. So need an array of image names, and then randomly pick from that.. */
+   
+    /* Write a play random audio function */ 
+    var player = new Audio(); // define a global audio object
+     
+     /*  a global array of sounds */
+    var sounds = ["music1.mp3","music2.mp3","music3.mp3", "music4.mp3"];
+
+    //load and play the sound, s is the name of a mp3 or wav file
+     function play(s) {
+         player.src = s;
+         player.load();
+         player.play();
+     }
+     
+     /* Play a random sound*/
+    function playRandomSound()
+     {
+        var sound = " ";
+        sound = randomStringFromArray(sounds);
+        play(sound);
+     }
 </script>
 </head>
 
 <body>
-
-        <header>
-        <h1>Week 9 assignment</h1>   
-        </header>
-
-        <div id="nav">
-            <ul>
-                <li><a href="week 0 assignment.html">Week 0</a></li>
-                <li><a href="week 1 assignment.html">Week 1 </a></li>
-                <li><a href="week 2 assignment.html">Week 2</a></li>
-                <li><a href="week 3 assignment.html">Week 3</a></li>
-                <li><a href="week 4 assignment.html">Week 4</a></li>
-                <li><a href="week 5 assignment.html">Week 5</a></li>
-                <li><a href="week 7 assignment.html">Week 7</a></li>
-                <li><a href="week 8 assignment.html">Week 8</a></li>
-                <li><a href="week 9 assignment.html">Week 9</a></li>
-            </ul>
+<div id="wrap">
+    <div id="header">
+        <h1>Week 10 assignment</h1>
+    </div>
+    <div id="nav">
+        <ul>
+            <li><a href="week 0 assignment.html">Week 0</a></li>
+            <li><a href="week 1 assignment.html">Week 1 </a></li>
+            <li><a href="week 2 assignment.html">Week 2</a></li>
+            <li><a href="week 3 assignment.html">Week 3</a></li>
+            <li><a href="week 4 assignment.html">Week 4</a></li>
+            <li><a href="week 5 assignment.html">Week 5</a></li>
+            <li><a href="week 7 assignment.html">Week 7</a></li>
+            <li><a href="week 8 assignment.html">Week 8</a></li>
+            <li><a href="week 9 assignment.html">Week 9</a></li>
+            <li><a href="week 10 assignment.html">Week 10</a></li>
+        </ul>
+    </div>
+    <div id="main">
+        
+        <div id = "main-1">
+            <h2 style="color:#635B20; font-family: 'Yusei Magic', sans-serif;"><em>RenyuPiao </em> </h2>
+            <img src="Renyu.jpeg" alt="a picture of Renyu"width="480"height="320">
+           
         </div>
+        
+        <div id = "main-2">   
+            <h2 style="color:#635B20; font-family: 'Yusei Magic', sans-serif;"><em>About Me</em></h2>
+            <p> Hello everyone! My name is <em>RenyuPiao </em> I’m full-time international student from China. This is my second semester in TESLA program. I have received my master’s degree of education in Foreign language Curriculum and Instruction. </p>
+            <p>I have some online teaching experiences and now is interested in how to combine the technology with language learning such as e-learning and language game design.</p>
+        </div>
+    </div>
+           
+    <BR>    
+    <div id="sidebar">
+            <h2 style="font-family: 'Yusei Magic', sans-serif;"><em>My family</em></h2>
+            <img src="My family.jpeg"alt="a picture of Pug"width="440"height="320">
+    </div>
 
-        <h1>Course Satisfaction Survey</h1>
-    </br>
-    </br>
-        <div class="column">
-            <p id="txthere"></p>
-            <button class="button1" onclick="writeText ('Your average survey score is  ' + doCalcAvg() , 'txthere');">Click to show your the average survey score </button>
-        </div>
-        </br>
-        </br>
-        <h1>Course Satisfaction Analysis</h1>
-        <div class="row">
-            <div class="column1">
-                <p>If your average score is between <em>0-4</em>, You might discuss with your course adviser to improve your whole course design.</p>
-                <img src="week 9 1.png" alt="a picture of math" width="180"height="180">
-            </div>
-            <div class="column1">
-                <p>If your average score is between <em>4-7</em>, You might focuse on improving specific course with lower survey score.</p>
-                <img src="week 9 2.png" alt="a picture of music" width="180"height="180">
-            </div>
-            <div class="column1">
-                <p>If your average score is between <em>7-10</em>, I'm glad you're happy with the course, keep it up!</p>
-                <img src="week 9 3.png" alt="a picture of paint" width="180"height="180">
-            </div>
-        </div>
-  </body>
+   
+    <FORM NAME="MyForm">
+         <input type="button" onclick="playRandomSound()" value="Click here to enjoy one of my favorite sounds" />
+    </FORM>
+ 
+
+    <div id="footer">
+        <p><em>©2021-RENYUPIAO</em></p>
+    </div>
+</div>
+</body>
 </html>
 
 
