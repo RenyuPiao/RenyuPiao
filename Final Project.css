@@ -1,0 +1,118 @@
+body {
+    background-image: url("FP\ bg.jpg") ;
+    width:100%;
+    text-align: center;
+  }
+  /* Style the navigation bar */
+  #nav {
+      padding:5px 10px;
+      background:#cc9;
+      font-family: 'Carter One',sans-serif;
+      text-align: center;
+      font-size: 20px;
+  }
+  /* Style the nav links */
+  #nav ul {
+      margin:0;
+      padding:0;
+      list-style-type: none;
+      overflow: hidden;
+  }
+  #nav li {
+      display:inline;
+      margin:0;
+      padding:0;
+  }
+  li {
+      float: left;
+     }
+    
+    li a {
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
+     /* Change the link color on hover */
+    li a:hover:not(.active) {
+      background-color: grey;
+    }
+    
+    .active {
+      background-color: #4CAF50;
+    }
+  * {
+    box-sizing: border-box;
+  }
+  /* Style the menu */
+  .menu {
+    float: left;
+    width: 20%;
+  }
+  .menuitem {
+    padding: 8px;
+    margin-top: 7px;
+    border-bottom: 1px solid #FFC200;
+  }
+  a:link, a:visited {
+    background-color: #cc9;
+    color: white;
+    padding: 14px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+  }
+  
+  a:hover, a:active {
+    background-color: grey;
+  }
+  /* Create two columns including main(60%) and right (20%))that floats next to each other */ 
+  .main {
+    float: left;
+    width: 60%;
+    padding: 0 20px;
+    overflow: hidden;
+  }
+  .right {
+  
+    float: left;
+    width: 20%;
+    padding: 10px 15px;
+    margin-top: 7px;
+  }
+  
+  @media only screen and (max-width:768px) {
+    /* For tablets: */
+    .main {
+      width: 80%;
+      padding: 0;
+    }
+    .right {
+      width: 100%;
+    }
+    #Korean {
+      display:none;
+    }
+    #Spanish {
+      display:block;
+    }
+    #Chinese{
+      display:block;
+    }
+  }
+  @media only screen and (max-width:425px) {
+    /* For mobile phones: */
+    .menu, .main, .right {
+      width: 100%;
+    }
+    #Korean {
+      display:none;
+    }
+    #Spanish {
+      display:none;
+    }
+    #Chinese{
+      display:block;
+    }
+}
