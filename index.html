@@ -1,69 +1,10 @@
 <!DOCTYPE html>
-
 <html>
 <head>
-<link rel="stylesheet" type="text/css" href="week 10 assignment.css" media="screen"> 
-
-<script type="text/javascript">
-
-/* Write a random image to a location. So need an array of image names, and then randomly pick from that.. */
-function GetRandomRange(lower, upper)
- {
- var length, aNumber;
-
- length = (upper - lower) + 1;
- aNumber = Math.floor(Math.random() * length) + lower;
- 
-//  alert("GetRandomRange" + lower + " " + upper + " " + aNumber);
- 
- return aNumber;
-
- }
- function randomStringFromArray(anArray)
-  {
-    var aString, len, high_index;
-    
-    len = anArray.length;
-    high_index = len - 1;
-    random_index =  GetRandomRange(0, high_index);
-    
-    aString = anArray[random_index];
-    /*
-    alert("the random string from an array of stings that will be returned is " + aString);
-    */
-    return aString;
-  }
-
- /* Write a random image to a location. So need an array of image names, and then randomly pick from that.. */
-   
-    /* Write a play random audio function */ 
-    var player = new Audio(); // define a global audio object
-     
-     /*  a global array of sounds */
-    var sounds = ["music1.mp3","music2.mp3","music3.mp3", "music4.mp3"];
-
-    //load and play the sound, s is the name of a mp3 or wav file
-     function play(s) {
-         player.src = s;
-         player.load();
-         player.play();
-     }
-     
-     /* Play a random sound*/
-    function playRandomSound()
-     {
-        var sound = " ";
-        sound = randomStringFromArray(sounds);
-        play(sound);
-     }
-</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="Final Project.css" media="screen"> 
 </head>
-
-<body>
-<div id="wrap">
-    <div id="header">
-        <h1>Week 10 assignment</h1>
-    </div>
+<body style="font-family:Verdana;">
     <div id="nav">
         <ul>
             <li><a href="week 0 assignment.html">Week 0</a></li>
@@ -76,40 +17,59 @@ function GetRandomRange(lower, upper)
             <li><a href="week 8 assignment.html">Week 8</a></li>
             <li><a href="week 9 assignment.html">Week 9</a></li>
             <li><a href="week 10 assignment.html">Week 10</a></li>
+            <li><a href="Final Project.html">Final Project</a></li>
         </ul>
     </div>
-    <div id="main">
-        
-        <div id = "main-1">
-            <h2 style="color:#635B20; font-family: 'Yusei Magic', sans-serif;"><em>RenyuPiao </em> </h2>
-            <img src="Renyu.jpeg" alt="a picture of Renyu"width="480"height="320">
-           
-        </div>
-        
-        <div id = "main-2">   
-            <h2 style="color:#635B20; font-family: 'Yusei Magic', sans-serif;"><em>About Me</em></h2>
-            <p> Hello everyone! My name is <em>RenyuPiao </em> I’m full-time international student from China. This is my second semester in TESLA program. I have received my master’s degree of education in Foreign language Curriculum and Instruction. </p>
-            <p>I have some online teaching experiences and now is interested in how to combine the technology with language learning such as e-learning and language game design.</p>
-        </div>
-    </div>
-           
-    <BR>    
-    <div id="sidebar">
-            <h2 style="font-family: 'Yusei Magic', sans-serif;"><em>My family</em></h2>
-            <img src="My family.jpeg"alt="a picture of Pug"width="440"height="320">
-    </div>
-
-   
-    <FORM NAME="MyForm">
-         <input type="button" onclick="playRandomSound()" value="Click here to enjoy one of my favorite sounds" />
-    </FORM>
- 
-
-    <div id="footer">
-        <p><em>©2021-RENYUPIAO</em></p>
-    </div>
+<div style="background-color:#FFC200;padding:15px;">
+  <h1><em>RY's Lanugae School</em></h1>
+  <h3>Your Personal Online Flipped Language Classroom</h3>
 </div>
+
+<div style="overflow:auto">
+  <div class="menu">
+
+    <div class="menuitem">
+        <a href="Final Project.html" target="_blank"> Main Page</a>
+    </div>
+
+    <div class="menuitem">
+        <a href="FP English.html" target="_blank">About English Course</a>
+    </div>
+
+    <div class="menuitem">
+        <a href="FP Chinese.html" target="_blank">About Chinese Course</a>
+    </div>
+    
+    <div class="menuitem">
+        <a href="FP Spanish.html" target="_blank">About Spanish Course</a>
+    </div>
+
+    <div class="menuitem">
+        <a href="FP German.html" target="_blank">About German Course</a>
+    </div>
+
+    <img src="FP 1.jpg" style="width:100%">
+
+  </div>
+
+  <div class="main">
+    <h2>About RY's language school</h2>
+    <p>Here is an introduction for language school</p>
+    <h2>RY's Language school Features</h2>
+    <p>Here is an Teaching Features for language school</p>
+    
+  </div>
+  <div class="right">
+    <h2>I will create three arrays to add and show students names on each language course </h2>
+    <p> Students will select their preference course and then there will be a stduents' name list to show others' name in the same course</p>
+    <p>Spanish</p>
+    <p>German</p>
+    <p>English</p>
+    <p>Chinese</p>
+  </div>
+</div>
+
+
+<div style="background-color:#FFC200;text-align:center;padding:10px;margin-top:7px;font-size:12px;"> <em>©2021-RENYUPIAO</em> </div>
 </body>
 </html>
-
-
