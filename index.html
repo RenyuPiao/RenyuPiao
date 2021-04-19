@@ -3,6 +3,52 @@
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" type="text/css" href="Final Project.css" media="screen"> 
+
+<script>
+  /** add Three buttons, click to show the school information.*/
+function myFunction1() {
+document.getElementById("demo1").innerHTML = "For many organizations, they want the curricula, teachers, and additional tutorial sessions. Many feel that their students need additional practice outside of the classroom. As such, custom packages can be ordered, that include tutorial sessions on top of the official classes.";
+}
+function myFunction2() {
+    document.getElementById("demo2").innerHTML = "Perfect for organizations that need dedicated curricula, lesson planning and high quality Spanish instruction. As your full Spanish solution, we keep your students on pace to complete a semester or year’s worth of Spanish work. We will provide all of the homework, quizzes, and exams as part of the solution package. Furthermore, one of our main goals is to ensure that your students actually start speaking Spanish from day one.";
+  }
+
+function myFunction3() {
+    document.getElementById("demo3").innerHTML = "A great option for organizations that already have a Spanish solution, but need additional support for specific students with specific learning needs. Our flexible scheduling and tailored sessions will help fulfill any additional needs or take any program to the next level. Our tutoring sessions are available 1-on-1, 2-on-1 or in small group format (curricula not included).";
+  }
+
+//create three arrays to add and show students names om the website//
+var studentnames1 = ["john Adams", "julie S", "Edward Tuffty"];
+var studentnames2 = ["Maria Garcia", "Maria Rodriguez", "Maria Hernandez"];
+var studentnames3 = ["James Johnson", "Mary Smith", "Olivia Taylor"];
+
+function showcourse1(){
+    document.getElementById("demo4").innerHTML = "Students' list in the English Course: " + studentnames1; 
+}
+function addStudent1()
+    {
+        studentnames1.push(prompt("If you choose English Course, Please enter your name here:"));
+        showcourse1();        
+    }
+
+function showcourse2(){
+    document.getElementById("demo5").innerHTML = "Students' list in the Chinese Course:  " + studentnames2; 
+}
+function addStudent2()
+    {
+        studentnames2.push(prompt("If you choose Chinese Course, Please enter your name here:"));
+        showcourse2();        
+    }
+
+function showcourse3(){
+    document.getElementById("demo6").innerHTML = "Students' list in the Spanish Course:  " + studentnames3; 
+}
+function addStudent3()
+    {
+        studentnames3.push(prompt("If you choose Spanish Course, Please enter your name here:"));
+        showcourse3();        
+    }
+</script>
 </head>
 <body style="font-family:Verdana;">
     <div id="nav">
@@ -44,32 +90,42 @@
         <a href="FP Spanish.html" target="_blank">About Spanish Course</a>
     </div>
 
-    <div class="menuitem">
-        <a href="FP German.html" target="_blank">About German Course</a>
-    </div>
-
     <img src="FP 1.jpg" style="width:100%">
 
   </div>
 
   <div class="main">
     <h2>About RY's language school</h2>
-    <p>Here is an introduction for language school</p>
+    <p>RY language school is located at Tampa, near beaches, exciting nightlife and world-class shopping. The beautiful campus is nestled on the banks of the Hillsborough River and has some of the best sports facilities in the nation for a school of its size.  We provide several language courses with interesting language activities.  We use novel teaching model such as PBL model and Flipped model.  </p>
     <h2>RY's Language school Features</h2>
-    <p>Here is an Teaching Features for language school</p>
-    
+
+   <p id="demo1"></p>
+   <button class="button1" type="button" onclick="myFunction1()">A full Language solution inside and outside of the classroom</button>
+
+   <p id="demo2"></p> 
+   <button class="button1" type="button" onclick="myFunction2()">Let us be your full Language solution</button>
+
+   <p id="demo3"></p> 
+   <button class="button1" type="button" onclick="myFunction3()">Augment your existing language solution</button>
+  
   </div>
-  <div class="right">
-    <h2>I will create three arrays to add and show students names on each language course </h2>
-    <p> Students will select their preference course and then there will be a stduents' name list to show others' name in the same course</p>
-    <p>Spanish</p>
-    <p>German</p>
-    <p>English</p>
-    <p>Chinese</p>
-  </div>
+
+
+    <div class="column2">
+      <h2>Survey: Enter your prefer language course here</h2>
+  
+      <p id="demo4"></p>
+      <p id="demo5"></p>
+      <p id="demo6"></p>
+      <button class="button2" type="button" onclick="addStudent1()">English Course</button>
+      <button class="button2" type="button" onclick="addStudent2()">Chinese Course</button>
+      <button class="button2" type="button" onclick="addStudent3()">Spanish Course</button>
+      </div>
+
 </div>
 
 
 <div style="background-color:#FFC200;text-align:center;padding:10px;margin-top:7px;font-size:12px;"> <em>©2021-RENYUPIAO</em> </div>
 </body>
 </html>
+
