@@ -2,61 +2,108 @@
 <html>
 <head>
     <link rel="stylesheet" type="text/css" href="FP English.css" media="screen"> 
+<script>
+      /** add Three buttons, click to show the school information.*/
+    function myFunction1() {
+    document.getElementById("demo1").innerHTML = "First and foremost, the writing system is extremely difficult for English speakers (and anyone else) accustomed to the Latin alphabet. In addition to the usual challenges that come with learning any language from scratch, people studying Mandarin must also memorize thousands of special characters, unlike anything seen in Latin-based languages.But writing isn’t the only difficult part of learning Mandarin. The tonal nature of the language makes speaking it very hard as well. There are several Chinese dialects, including Cantonese — spoken primarily in southeastern China, as well as in Hong Kong and other parts of Southeast Asia — which have different written characters and pronunciations, and are also very difficult to learn. Mandarin Chinese (the most common dialect) has four tones, so one word can be pronounced four different ways, and each pronunciation has a different meaning. For instance, the word ma can mean “mother,” “horse,” “rough” or “scold” — depending on how you say it.";
+    }
+
+    /* Write a random image to a location. So need an array of image names, and then randomly pick from that.. */
+function GetRandomRange(lower, upper)
+ {
+ var length, aNumber;
+
+ length = (upper - lower) + 1;
+ aNumber = Math.floor(Math.random() * length) + lower;
+ 
+//  alert("GetRandomRange" + lower + " " + upper + " " + aNumber);
+ 
+ return aNumber;
+
+ }
+ function randomStringFromArray(anArray)
+  {
+    var aString, len, high_index;
+    
+    len = anArray.length;
+    high_index = len - 1;
+    random_index =  GetRandomRange(0, high_index);
+    
+    aString = anArray[random_index];
+    /*
+    alert("the random string from an array of stings that will be returned is " + aString);
+    */
+    return aString;
+  }
+
+ /* Write a random image to a location. So need an array of image names, and then randomly pick from that.. */
+   
+    /* Write a play random audio function */ 
+    var player = new Audio(); // define a global audio object
+     
+     /*  a global array of sounds */
+    var sounds = ["Chinese 1.mp3","Chinese 2.mp3","Chinese 3.mp3"];
+
+    //load and play the sound, s is the name of a mp3 or wav file
+     function play(s) {
+         player.src = s;
+         player.load();
+         player.play();
+     }
+     
+     /* Play a random sound*/
+    function playRandomSound()
+     {
+        var sound = " ";
+        sound = randomStringFromArray(sounds);
+        play(sound);
+     }
+</script>
 </head>
 <body>
 
 <div class="header">
   <h1>Chinese Course</h1>
-  <p>Text</p>
+  <p>Learn Chinese in an easier way!</p>
 </div>
 
 <div class="topnav">
-  <a href="Final Project.html">Main</a>
-  <a href="FP English.html">About English</a>
-  <a href="FP Chinese.html">About Chinese</a>
-  <a href="FP Spanish.html">About Spanish</a>
+  <a href="Final Project.html">Main Page</a>
+  <a href="FP English.html">About English Course</a>
+  <a href="FP Chinese.html">About Chinese Course</a>
+  <a href="https://renyupiao3.wixsite.com/mysite">My Portfolio</a>
 
 </div>
 
 <div class="row">
   <div class="leftcolumn">
     <div class="card">
-      <h2>TITLE HEADING</h2>
-      <h5>Title description</h5>
-      <div class="fakeimg" style="height:200px;">Image</div>
-      <p>Some text..</p>
+      <h2>Why Chinese is harder to learn?</h2>
+      <p id="demo1"></p>
+      <button class="button1" type="button" onclick="myFunction1()">Clik here to know the answer.</button>
+      <img src="Chinese.png" alt="a picture of Chinese" width="636"height="320">
+     
       <p></p>
     </div>
     <div class="card">
-      <h2>TITLE HEADING</h2>
-      <h5>Title description</h5>
-      <div class="fakeimg" style="height:200px;">Image</div>
-      <p>Some text..</p>
-      <p></p>
+      <h3>Do you understand these Chinese sentences?</h3>
+      <input class="button1" type="button" onclick="playRandomSound()" value="Click here to listen some Chinese sentences." />
     </div>
   </div>
   <div class="rightcolumn">
     <div class="card">
-      <h2>About Course</h2>
-      <div class="fakeimg" style="height:100px;">Image</div>
-      <p>Some text </p>
+      <h2>Course Feature</h2>
+      <p>-Our course usually starts with story time or meaningful material display. Each week the teacher will choose an interesting topic, highlighting comprehensive ability and useful knowledge learning.</p>
+      <p>-The second part emphasizes on reading practice. Each student will read aloud during this session. The reading material is meaningful and suitable to elementary level. Questions are asked before, during, and after the read aloud session to encourage reading comprehensive.</p>
+      <p>-In the last part we will have more comprehensive training. One example is roll and play. Each student will select a role and act out the activity shown. Another example is to retell the material content. These interesting activities is beneficial to student’s comprehensive language skills especially the reading skill.</p>
     </div>
     <div class="card">
-      <h3>Popular Post</h3>
-      <div class="fakeimg"><p>Image</p></div>
-      <div class="fakeimg"><p>Image</p></div>
-      <div class="fakeimg"><p>Image</p></div>
-    </div>
-    <div class="card">
-      <h3>Follow Me</h3>
-      <p>Some text..</p>
+      <h3>What is Chinese characters？</h3>
+      <img src="Chinese 1.png" alt="a picture of Chinese characters" width="636"height="320">
     </div>
   </div>
 </div>
-
-<div class="footer">
-  <h2>Footer</h2>
-</div>
+<div style="background-color:#FFC200;text-align:center;padding:10px;margin-top:7px;font-size:12px;"> <em>©2021-RENYUPIAO</em> </div>
 
 </body>
 </html>
