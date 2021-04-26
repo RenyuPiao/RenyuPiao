@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <link rel="stylesheet" type="text/css" href="FP English.css" media="screen"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+  <link rel="stylesheet" type="text/css" href="FP English.css" media="screen"> 
 <script>
-      /** add Three buttons, click to show the school information.*/
+    /** add one button, click to show the content.*/
     function myFunction1() {
     document.getElementById("demo1").innerHTML = "First and foremost, the writing system is extremely difficult for English speakers (and anyone else) accustomed to the Latin alphabet. In addition to the usual challenges that come with learning any language from scratch, people studying Mandarin must also memorize thousands of special characters, unlike anything seen in Latin-based languages.But writing isn’t the only difficult part of learning Mandarin. The tonal nature of the language makes speaking it very hard as well. There are several Chinese dialects, including Cantonese — spoken primarily in southeastern China, as well as in Hong Kong and other parts of Southeast Asia — which have different written characters and pronunciations, and are also very difficult to learn. Mandarin Chinese (the most common dialect) has four tones, so one word can be pronounced four different ways, and each pronunciation has a different meaning. For instance, the word ma can mean “mother,” “horse,” “rough” or “scold” — depending on how you say it.";
     }
@@ -30,9 +31,7 @@ function GetRandomRange(lower, upper)
     random_index =  GetRandomRange(0, high_index);
     
     aString = anArray[random_index];
-    /*
-    alert("the random string from an array of stings that will be returned is " + aString);
-    */
+    /*alert("the random string from an array of stings that will be returned is " + aString);*/
     return aString;
   }
 
