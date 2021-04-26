@@ -2,61 +2,121 @@
 <html>
 <head>
     <link rel="stylesheet" type="text/css" href="FP English.css" media="screen"> 
+
+<script>
+      /** add Three buttons, click to show the school information.*/
+    function myFunction1() {
+    document.getElementById("demo1").innerHTML = "Generally speaking, the Flipped instruction is defined as “ a pedagogical approach in which direct instruction moves from the group learning space to the individual learning space, and the resulting group space is transformed into a dynamic, interactive learning environment where the educator guides students as they apply concepts and engage creatively in the subject matter.” (Flipped Learning Network, 2014). The Flipped classroom procedure could be divided into three part including pre-class learning preparation, in-class learning activities, and post-class learning consolidation (Kong, 2014). Meanwhile, this procedure can be coupled with Anderson and Krathwohl ‘s revised taxonomy (2009), which puts language learning into two dimensions: knowledge and cognitive process. The knowledge dimension includes factual, conceptual, procedural, and metacognitive knowledge and the cognitive process dimension reflects thinking skills such as remembering, understanding, applying, evaluating, and creating.";
+    }
+
+    /* Write a random image to a location. So need an array of image names, and then randomly pick from that.. */
+function GetRandomRange(lower, upper)
+ {
+ var length, aNumber;
+
+ length = (upper - lower) + 1;
+ aNumber = Math.floor(Math.random() * length) + lower;
+ 
+//  alert("GetRandomRange" + lower + " " + upper + " " + aNumber);
+ 
+ return aNumber;
+
+ }
+ function randomStringFromArray(anArray)
+  {
+    var aString, len, high_index;
+    
+    len = anArray.length;
+    high_index = len - 1;
+    random_index =  GetRandomRange(0, high_index);
+    
+    aString = anArray[random_index];
+    /*
+    alert("the random string from an array of stings that will be returned is " + aString);
+    */
+    return aString;
+  }
+
+ /* Write a random image to a location. So need an array of image names, and then randomly pick from that.. */
+   
+    /* Write a play random audio function */ 
+    var player = new Audio(); // define a global audio object
+     
+     /*  a global array of sounds */
+    var sounds = ["English 1.mp3","English 2.mp3","English 3.mp3"];
+
+    //load and play the sound, s is the name of a mp3 or wav file
+     function play(s) {
+         player.src = s;
+         player.load();
+         player.play();
+     }
+     
+     /* Play a random sound*/
+    function playRandomSound()
+     {
+        var sound = " ";
+        sound = randomStringFromArray(sounds);
+        play(sound);
+     }
+</script>
+
+
 </head>
 <body>
 
 <div class="header">
   <h1>English Course</h1>
-  <p>Text</p>
+  <p>Your online Language Lab</p>
 </div>
 
 <div class="topnav">
-  <a href="Final Project.html">Main</a>
-  <a href="FP English.html">About English</a>
-  <a href="FP Chinese.html">About Chinese</a>
-  <a href="FP Spanish.html">About Spanish</a>
-
+  <a href="Final Project.html">Main Page</a>
+  <a href="FP English.html">About English Course</a>
+  <a href="FP Chinese.html">About Chinese Course</a>
+  <a href="https://renyupiao3.wixsite.com/mysite">My Portfolio</a>
 </div>
 
 <div class="row">
   <div class="leftcolumn">
     <div class="card">
-      <h2>TITLE HEADING</h2>
-      <h5>Title description</h5>
-      <div class="fakeimg" style="height:200px;">Image</div>
-      <p>Some text..</p>
+      <h2>What is English lab? </h2>
+      <h5>An English course with Flipped Classroom</h5>
+      <p>This ideal Flipped Language Lab is combined with a pedagogical framework for mobile assisted language teaching and learning. That is, since the Flipped classroom depends more on self-learning and technology support, much research will be conducted to combine this pedagogical framework to design the lab. </p>
       <p></p>
     </div>
     <div class="card">
-      <h2>TITLE HEADING</h2>
-      <h5>Title description</h5>
-      <div class="fakeimg" style="height:200px;">Image</div>
-      <p>Some text..</p>
-      <p></p>
+      <h2>What is Flipped Classroom?</h2>
+      <img src="flipped1.png" alt="a picture of Filipped class introduction"width="636"height="420">
+      <p id="demo1"></p>
+      <button class="button1" type="button" onclick="myFunction1()">Clik here to know the description of Flipped Classroom</button>
+      <h3>Do you understand these English sentences?</h3>
+      <input class="button1" type="button" onclick="playRandomSound()" value="Click here to listen some English sentences." />
     </div>
   </div>
-  <div class="rightcolumn">
+ <div class="rightcolumn">
     <div class="card">
-      <h2>About Course</h2>
-      <div class="fakeimg" style="height:100px;">Image</div>
-      <p>Some text </p>
+      <h2>Course Feature</h2>
+      <h3><em> Pre-class Learning Preparation Learning</em> </h3>
+      <p>-Self-learning Computer Room;</p>
+      <p>-Self-test Computer Room;</p>
+      <p>-Consulting Room;</p>
+      <h3><em>In-class Activity Learning</em> </h3>
+      <p>-Group Project Room;</p>
+      <p>-Theater Room;</p>
+      <p>-Discussion Room;</p>
+      <h3><em>Post-class Consolidation Learning </em> </h3>
+      <p>-Language Game Room;</p>
+      <p>-Self-review Room;</p>
     </div>
     <div class="card">
-      <h3>Popular Post</h3>
-      <div class="fakeimg"><p>Image</p></div>
-      <div class="fakeimg"><p>Image</p></div>
-      <div class="fakeimg"><p>Image</p></div>
-    </div>
-    <div class="card">
-      <h3>Follow Me</h3>
-      <p>Some text..</p>
+      <h3>The Physical Space Design of the Language Lab</h3>
+      <img src="language lab space design.png" alt="a picture of physical design" width="636"height="320">
     </div>
   </div>
 </div>
 
-<div class="footer">
-  <h2>Footer</h2>
-</div>
+<div style="background-color:#FFC200;text-align:center;padding:10px;margin-top:7px;font-size:12px;"> <em>©2021-RENYUPIAO</em> </div>
 
 </body>
 </html>
