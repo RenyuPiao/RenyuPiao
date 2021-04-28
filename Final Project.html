@@ -40,14 +40,6 @@ function addStudent2()
         showcourse2();        
     }
 
-function showcourse3(){
-    document.getElementById("demo6").innerHTML = "Students' list in the Spanish Course:  " + studentnames3; 
-}
-function addStudent3()
-    {
-        studentnames3.push(prompt("If you choose Spanish Course, Please enter your name here:"));
-        showcourse3();        
-    }
  
    /** Function to add name and age,generating survey results */
 
@@ -145,7 +137,6 @@ function addStudent3()
       <p id="demo6"></p>
       <button class="button3" type="button" onclick="addStudent1()">English Course</button>
       <button class="button3" type="button" onclick="addStudent2()">Chinese Course</button>
-      <button class="button3" type="button" onclick="addStudent3()">Spanish Course</button>
 
       <h2>Register For a Language Course Here</h2>
        <form NAME="Survey" METHOD="post" ACTION="http://www.tipjar.com/bin/generic?Subject=TJGFH+TEST&mailto=ERW">
